@@ -13,7 +13,7 @@ void nonBlockingDisable(struct termios *previous_settings) {
 //Change input terminal settings so that input becomes no blocking
 //Returns the previous settings
 struct termios nonBlockingEnable() {
-	struct termios previous_settings;
+    struct termios previous_settings;
     struct termios new_settings;
 	tcgetattr(0, &previous_settings); //Read actual settings
     new_settings = previous_settings; //Start modifying them
